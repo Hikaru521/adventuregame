@@ -94,7 +94,7 @@ def mozgas():
           "\nAlapvetően egy szerencsére alapuló játékot játszol,\n"
           "szóval sok szerencsét hozzá!\n"
           "Vágjunk is mindennek a közepébe és válassz karaktert!")
-    time.sleep(7.5)
+    time.sleep(8.5)
     clear_screen()
     pickelt_class = picker()
     while True:
