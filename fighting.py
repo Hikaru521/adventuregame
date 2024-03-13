@@ -10,9 +10,9 @@ class player:
         self.max_hp = hp
 
 characters = {"Warrior":player("Warrior", 150, random.randrange(40, 50)), #easy
-        "Mage":player("Mage", 105, random.randrange(20, 45)), #hard
+        "Mage":player("Mage", 105, random.randrange(20, 60)), #hard
         "Assassin":player("Assassin", 110, random.randrange(40, 50)), #medium
-        "Summoner":player("Summoner", 100, random.randrange(10, 30))} #impossible
+        "Summoner":player("Summoner", 100, random.randrange(10, 67))} #impossible
 
 
 def fighting(karakter, room):
@@ -32,7 +32,7 @@ def fighting(karakter, room):
                 if characters[karakter].nev == "Warrior":
                     characters[karakter].dmg = random.randrange(40, 50)
                 if characters[karakter].nev == "Mage":
-                    characters[karakter].dmg = random.randrange(20, 45)
+                    characters[karakter].dmg = random.randrange(20, 60)
                 if characters[karakter].nev == "Assassin":
                     characters[karakter].dmg = random.randrange(40, 50)
                 if characters[karakter].nev == "Summoner":
@@ -51,6 +51,7 @@ def fighting(karakter, room):
                         print("Reméljük tetszett!\n"
                              "Készítette: - Bácsi Péter\n"
                              "            - Szabó Kristóf")
+                        time.sleep(5)
                         exit()
                     room.enemy = None
                     time.sleep(2)
@@ -75,5 +76,6 @@ def fighting(karakter, room):
             player_turn = True
             if sebzes_e <= 0:
                 print("Vesztettél az ellenfeleddel szemben!")
+                time.sleep(5)
                 exit("Próbáld újra előről!")
 
