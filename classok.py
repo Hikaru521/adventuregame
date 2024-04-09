@@ -1,8 +1,8 @@
 class_v = None
 def picker():
     print("Válassz karaktert:")
-    print("1. Warrior:  Nagyon erős támadás és 150 egységnyi életerő! (Nehézség: Easy)")
-    print("2. Assassin: Erős támadás és 110 egységnyi életerő! (Nehézség: Medium)")
+    print("1. Warrior:  Nagyon erős támadás és 150 egységnyi életerő! (Nehézség: Easy)\n"
+          "2. Assassin: Erős támadás és 110 egységnyi életerő! (Nehézség: Medium)")
     print("3. Mage:     Közepesen erős támadás és 105 egységnyi életerő! (Nehézség: Hard)")
     print("4. Summoner: Gyenge támadás és 100 egységnyi életerő! (Nehézség: Impossible)")
     class_i = input("\nÍrd be a választott karaktered számát:")
