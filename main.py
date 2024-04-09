@@ -91,18 +91,15 @@ def redraw_map() -> str:
     return output
 
 def mozgas():
-    #kezdo_szoveg #Dialog
     kezdo_szoveg = Dialog("","Üdvözöllek a játékban!","Alapvetően egy szerencsére alapuló játékot játszol,","szóval sok szerencsét hozzá!","Vágjunk is mindennek a közepébe és add meg a nevedet amin hívhatunk!")
     kezdo_szoveg.print()
-    time.sleep(2)#8.5
+    time.sleep(3.5)#3.5
     clear_screen()
     username = input("Add meg a nevedet: ")
-    #koszonto_1 = Dialog
-    print(f"Üdvözöllek {username}!")
-    #koszonto_2 =Dialog
-    print("Jöhet is a karakter választás!")
-    #koszonto_1.print()
-    #koszonto_2.print()
+    koszonto_1 = Dialog(f"Üdvözöllek {username}!")
+    koszonto_2 = Dialog("Jöhet is a karakter választás!")
+    koszonto_1.print()
+    koszonto_2.print()
     time.sleep(3.5)
     clear_screen()
     pickelt_class = picker()
@@ -113,7 +110,7 @@ def mozgas():
         for k, v in rooms.items():
             if v.y == player_position[0] and v.x == player_position[1]:
                 print(v.story_t)
-                print(v.message) #v.message.print()
+                v.message.print()
                 print(v.story_a)
                 if v.enemy is None:
                     break
